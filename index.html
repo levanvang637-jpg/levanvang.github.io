@@ -1,17 +1,77 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Ví dụ HTML</title>
+    <title>Ví dụ 2</title>
     <style>
-        /* CSS để chỉnh màu sắc đường kẻ cho giống ảnh */
-        .red-hr { border: 2px solid red; width: 400px; }
-        .blue-hr { border: 3px solid blue; width: 500px; }
-        .poem-container { font-family: 'Courier New', Courier, monospace; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* Định dạng các thẻ Heading */
+        h1, h2, h3, h4, h5, h6 {
+            margin: 5px 0;
+            text-transform: uppercase;
+        }
+        h4 { font-size: 14px; }
+        h5 { font-size: 12px; }
+        h6 { font-size: 10px; }
+
+        /* Đường kẻ ngang tùy chỉnh */
+        .hr-blue {
+            border: 0;
+            height: 3px;
+            background-color: blue;
+            width: 60%;
+            margin: 10px auto;
+        }
+        .hr-red {
+            border: 0;
+            height: 5px;
+            background-color: red;
+            width: 80%;
+            margin: 5px auto;
+        }
+        .hr-thin {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+
+        /* Định dạng văn bản */
+        .center-text {
+            text-align: center;
+        }
+        .blue-text {
+            color: blue;
+            font-size: 12px;
+        }
+        .red-title {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .poem-container {
+            margin-left: 20px;
+        }
+        .indent-1 { margin-left: 40px; }
+        .indent-2 { margin-left: 80px; }
+        
+        .info-section {
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px dashed #000;
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
+    <div class="info-section">
+        <p><strong>Họ và tên:</strong> Lê Văn Vàng</p>
+        <p><strong>Lớp:</strong> DA25TTD</p>
+        <p><strong>Môn:</strong> Thiết kế web</p>
+        <p><strong>MSSV:</strong> 110125206</p>
+    </div>
 
     <h1>HEADING 1</h1>
     <h2>HEADING 2</h2>
@@ -20,25 +80,26 @@
     <h5>HEADING 5</h5>
     <h6>HEADING 6</h6>
 
-    <hr class="red-hr">
-    <hr class="blue-hr">
-
-    <p style="text-align: center;">Trên đây là dòng kẻ ngang</p>
-
-    <h2 style="color: red; text-align: center;">Thơ ngắn 2 câu</h2>
-
-    <div class="poem-container">
-        <p>
-            Biển cứ cậy là mình dài rộng thế.<br>
-            Vắng cánh buồm chỉ một chút đã cô đơn.<br>
-            <br>
-            Chút nắng vàng sao làm nên mùa hạ.<br>
-            Chút tình xa lạ sao giữ được người ta.<br>
-            <br>
-            Có khi nào trên đường đời tấp nập.<br>
-            Ta vô tình đi lướt qua nhau.
-        </p>
+    <div class="center-text">
+        <hr class="hr-blue">
+        <hr class="hr-red">
+        <p class="blue-text">Trên đây là dòng kẻ ngang</p>
+        <p class="red-title">Thơ ngắn 2 câu</p>
     </div>
 
+    <div class="poem-container">
+        <p>Biển cứ cậy mình là đất rộng thế.<br>
+        <span class="indent-1">Vắng cánh buồm chỉ một chút đã cô đơn.</span></p>
+        
+        <p><span class="indent-2">Chút nắng vàng sao làm nên mùa hạ.</span><br>
+        <span class="indent-1">Chút tình xa lạ sao giữ được người ta.</span></p>
+
+        <p>Có khi nào trên đường đời tấp nập.<br>
+        Ta vô tình đi lướt qua nhau.</p>
+        
+    
+    </div>
+
+    <hr class="hr-thin">
 </body>
 </html>
